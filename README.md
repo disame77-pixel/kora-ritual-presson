@@ -2,7 +2,7 @@
 
 Mi calculadora de precios para sets press on. App instalable (PWA), funciona sin internet y guarda todo en el teléfono.
 
-- En línea: https://disame77-pixel.github.io/kora-ritual-press/
+- En línea: https://disame77-pixel.github.io/kora-ritual-presson/
 - Lógica y fórmulas: `src/lib/calc.ts` · insumos y tiempos iniciales: `src/lib/defaults.ts`
 - Pruebas (incluye la prueba de control: 2 h 42 min y $125.000): `npm test`
 
