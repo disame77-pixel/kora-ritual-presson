@@ -1,0 +1,30 @@
+{
+  "name": "kora-ritual-press",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.5",
+    "@fontsource/instrument-sans": "^5.2.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tailwindcss": "^4.1.4",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.2",
+    "vite-plugin-pwa": "^1.0.0",
+    "vitest": "^3.1.2"
+  }
+}

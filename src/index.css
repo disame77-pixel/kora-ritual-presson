@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --k-bg: #eee9ec;
+  --k-card: #f8f5f6;
+  --k-ink: #24161c;
+  --k-soft: #6b5a61;
+  --k-line: #d9ced3;
+  --k-pom: #8a1c38;
+  --k-seed: #e7b3c1;
+  --k-silver: #a7a6af;
+  /* barra del precio: siempre oscura */
+  --k-bar: #24161c;
+  --k-bar-ink: #f8f5f6;
+  --k-warn: #9a5b12;
+  --k-ok: #3f6b4e;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --k-bg: #352b33; /* ciruela de la web */
+    --k-card: #40353e;
+    --k-ink: #faf7f2; /* crema algodón de la web */
+    --k-soft: #c4b3b9;
+    --k-line: #56494f;
+    --k-pom: #c23a5c;
+    --k-seed: #e7b3c1;
+    --k-silver: #8f8c96;
+    --k-bar: #241d23;
+    --k-bar-ink: #faf7f2;
+    --k-warn: #e0a55a;
+    --k-ok: #7fb08f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --k-bg: #352b33; /* ciruela de la web */
+  --k-card: #40353e;
+  --k-ink: #faf7f2; /* crema algodón de la web */
+  --k-soft: #c4b3b9;
+  --k-line: #56494f;
+  --k-pom: #c23a5c;
+  --k-seed: #e7b3c1;
+  --k-silver: #8f8c96;
+  --k-bar: #241d23;
+  --k-bar-ink: #faf7f2;
+  --k-warn: #e0a55a;
+  --k-ok: #7fb08f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--k-bg);
+  --color-card: var(--k-card);
+  --color-ink: var(--k-ink);
+  --color-soft: var(--k-soft);
+  --color-line: var(--k-line);
+  --color-pom: var(--k-pom);
+  --color-seed: var(--k-seed);
+  --color-silver: var(--k-silver);
+  --color-bar: var(--k-bar);
+  --color-bar-ink: var(--k-bar-ink);
+  --color-warn: var(--k-warn);
+  --color-ok: var(--k-ok);
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  background: var(--k-bg);
+  color: var(--k-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 2px solid var(--k-pom);
+  outline-offset: 2px;
+}
+.tabular {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+/* quita las flechas de los input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="range"] {
+  accent-color: var(--k-pom);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
